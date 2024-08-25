@@ -1,3 +1,5 @@
+const API_BASE_URL = import.meta.env.API_BASE_URL || '';
+
 export type LoginData = {
     email: string
     password: string
@@ -13,7 +15,7 @@ export async function handleRegister(data: RegisterData) {
     if(data.password !== data.confirmPassword){
         throw new Error('Passwords do not match')
     }
-  return await fetch('https://liz-motors-internship-fullstack-project.onrender.com/api/register', {
+  return await fetch(`${API_BASE_URL}/api/register`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -24,7 +26,7 @@ export async function handleRegister(data: RegisterData) {
 
 export async function handleLogin(data: LoginData){
     //do something related to login
-    const response = await fetch('https://liz-motors-internship-fullstack-project.onrender.com/api/login', {
+    const response = await fetch(`${API_BASE_URL}/api/login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

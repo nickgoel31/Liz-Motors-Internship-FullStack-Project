@@ -34,7 +34,7 @@ const ModulePage = () => {
         <div className='flex items-center justify-between w-full'>
           <div className='heading flex items-center w-full justify-start gap-3'>
             <Link to={`/`} className='p-2 bg-white/0 rounded-md border border-white/10 cursor-pointer text-black dark:text-white transition hover:text-black dark:hover:text-white'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-left" viewBox="0 0 16 16">
+              <svg xmlns="https://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-left" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
               </svg>
             </Link>
@@ -72,7 +72,7 @@ const ModulePage = () => {
             // If the module is not the first module, show the previous module, we can show previous module using the sequence number
             <a href={`/module/${modules[module.sequence-2]._id}`} className='group flex items-center gap-2 text-black dark:text-white transition hover:text-black dark:hover:text-white'>
             <div className='rounded-full border border-white/50 p-1 opacity-50 group-hover:opacity-100 group-hover:border-white-20 cursor-pointer transition'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-arrow-left-short" viewBox="0 0 16 16">
+              <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-arrow-left-short" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
               </svg>
             </div>
@@ -95,7 +95,7 @@ const ModulePage = () => {
             <p className='text-sm font-semibold'>Next Module:</p>
             <p className='text-sm font-medium opacity-80'>{module.sequence < 500 ? modules[module.sequence].title : modules[module.sequence-1].title }</p>
             <div className='rounded-full border border-white/50 p-1 opacity-50 group-hover:opacity-100 group-hover:border-white-20 cursor-pointer transition'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
             </svg>
             </div>
