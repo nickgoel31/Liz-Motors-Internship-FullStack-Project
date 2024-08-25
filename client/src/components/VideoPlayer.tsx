@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from 'react'
 import ReactPlayer from 'react-player'
 import { UserType } from '../types'
 
-const API_BASE_URL = import.meta.env.API_BASE_URL || '';
+const API_BASE_URL = import.meta.env.API_BASE_URL || 'https://liz-motors-internship-fullstack-project.onrender.com';
 
 
 const VideoPlayer = ({ url, moduleId, user, setVideoCompleted, videoCompleted, videoCompletedLocal, setVideoCompletedLocal }: { url: string, moduleId: string, user: UserType,videoCompleted:boolean, setVideoCompleted: (b:boolean) => void, videoCompletedLocal: boolean, setVideoCompletedLocal: (b:boolean) => void }) => {
