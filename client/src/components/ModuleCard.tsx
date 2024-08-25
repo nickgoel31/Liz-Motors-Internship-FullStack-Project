@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 import { ModuleType } from '../types'
 import useUser from '../hooks/useUser'

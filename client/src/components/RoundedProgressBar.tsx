@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const RoundedProgressBar = ({ progress }:{progress:number}) => {
   const radius = 50;

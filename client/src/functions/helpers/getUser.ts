@@ -1,7 +1,7 @@
 export async function getUserFromServer(){
     const token = localStorage.getItem('token')
     if(!token) return null
-    const response = await fetch('http://localhost:3000/api/get/user', {
+    const response = await fetch('https://liz-motors-internship-fullstack-project.onrender.com/api/get/user', {
         method: 'POST',
         headers:{
             'Content-Type': 'application/json',

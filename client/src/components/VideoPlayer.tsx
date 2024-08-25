@@ -16,7 +16,7 @@ const VideoPlayer = ({ url, moduleId, user, setVideoCompleted, videoCompleted, v
   const isMounted = useRef(false)
 
   const updateVideoTime = useCallback((time: number) => {
-    fetch('http://localhost:3000/api/update/user', {
+    fetch('https://liz-motors-internship-fullstack-project.onrender.com/api/update/user', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const VideoPlayer = ({ url, moduleId, user, setVideoCompleted, videoCompleted, v
   
 
   function handleEnd() {
-    fetch('http://localhost:3000/api/update/user', {
+    fetch('https://liz-motors-internship-fullstack-project.onrender.com/api/update/user', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
