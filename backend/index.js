@@ -19,7 +19,7 @@ const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://liz-motors-frontend-internship.netlify.app/",
+    origin: "*",
   })
 );
 app.use(bodyParser.json());
