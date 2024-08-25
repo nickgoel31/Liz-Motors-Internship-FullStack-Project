@@ -1,7 +1,7 @@
-const API_BASE_URL = import.meta.env.API_BASE_URL || 'https://liz-motors-internship-fullstack-project.onrender.com';
+// const API_BASE_URL = import.meta.env.API_BASE_URL || 'https://liz-motors-internship-fullstack-project.onrender.com';
 
 export async function getModulesFromServer(branchId:string) {
-    const response = await fetch(`${API_BASE_URL}/api/get/modules/${branchId}`, {
+    const response = await fetch(`https://liz-motors-internship-fullstack-project.onrender.com/api/get/modules/${branchId}`, {
         method: 'GET',
     })
     const res = await response.json()
@@ -10,7 +10,7 @@ export async function getModulesFromServer(branchId:string) {
 }
 
 export async function getModuleFromServerById(id:string) {
-    const response = await fetch(`${API_BASE_URL}/api/module/${id}`, {
+    const response = await fetch(`https://liz-motors-internship-fullstack-project.onrender.com/api/module/${id}`, {
         method: 'GET',
     })
     const res = await response.json()

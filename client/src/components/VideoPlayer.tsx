@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from 'react'
 import ReactPlayer from 'react-player'
 import { UserType } from '../types'
 
-const API_BASE_URL = import.meta.env.API_BASE_URL || 'https://liz-motors-internship-fullstack-project.onrender.com';
+// const API_BASE_URL = import.meta.env.API_BASE_URL || 'https://liz-motors-internship-fullstack-project.onrender.com';
 
 
 const VideoPlayer = ({ url, moduleId, user, setVideoCompleted, videoCompleted, videoCompletedLocal, setVideoCompletedLocal }: { url: string, moduleId: string, user: UserType,videoCompleted:boolean, setVideoCompleted: (b:boolean) => void, videoCompletedLocal: boolean, setVideoCompletedLocal: (b:boolean) => void }) => {
@@ -18,7 +18,7 @@ const VideoPlayer = ({ url, moduleId, user, setVideoCompleted, videoCompleted, v
   const isMounted = useRef(false)
 
   const updateVideoTime = useCallback((time: number) => {
-    fetch(`${API_BASE_URL}/api/update/user`, {
+    fetch(`https://liz-motors-internship-fullstack-project.onrender.com/api/update/user`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const VideoPlayer = ({ url, moduleId, user, setVideoCompleted, videoCompleted, v
   
 
   function handleEnd() {
-    fetch(`${API_BASE_URL}/api/update/user`, {
+    fetch(`https://liz-motors-internship-fullstack-project.onrender.com/api/update/user`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
