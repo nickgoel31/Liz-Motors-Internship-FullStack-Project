@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.API_BASE_URL || '';
+const API_BASE_URL = import.meta.env.API_BASE_URL || 'https://liz-motors-internship-fullstack-project.onrender.com';
 
 export type LoginData = {
     email: string
