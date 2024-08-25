@@ -77,13 +77,13 @@ async function updateUserController(req, res) {
     }
     user.currentModuleVideoTime = videoTime;
     if (completed) {
+      user.currentModuleVideoTime = 0;
       if (!user.completedModulesId.includes(moduleId)) {
         user.completedModulesId.push(moduleId);
         user.currentModuleId =
           currentModule.sequence < modules.length
             ? String(modules[currentModule.sequence]._id)
             : null;
-        user.currentModuleVideoTime = 0;
       }
     }
     user

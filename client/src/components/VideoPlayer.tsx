@@ -52,6 +52,7 @@ const VideoPlayer = ({ url, moduleId, user, setVideoCompleted, videoCompleted, v
   useEffect(() => {
     if (videoCompletedLocal) {
       setWatchAgain(false);
+      setPlayedSeconds(0)
     } 
     if (!videoCompleted && playedSeconds > 0) {
       updateVideoTime(playedSeconds);
