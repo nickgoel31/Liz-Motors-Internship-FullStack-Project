@@ -12,7 +12,6 @@ import moduleRouter from "./view/module.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 4000;
 
 //MIDDLEWARES
 
@@ -45,6 +44,6 @@ app.use("/api", adminRouter);
 app.use("/api", branchRouter);
 app.use("/api", moduleRouter);
 
-app.listen(port, () => {
-  console.log("Server is running on render port ");
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
 });
